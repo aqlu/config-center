@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error</title>
+    <link rel="icon" th:href="@{/images/favicon.ico}" href="../static/images/favicon.ico"/>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+    <link th:href="@{/css/starter-template.css}" href="../static/css/starter-template.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">配置中心</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a th:href="@{/logout}" href="/logout">logout</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="alert alert-warning" role="alert">
+        <strong>Access denied: </strong>You do not have permission for that resource.
+    </div>
+    <div class="well">
+        <div th:text="${message}">Fake content</div>
+        Please contact the operator with the above information.
+    </div>
+</div>
+</body>
+</html>
